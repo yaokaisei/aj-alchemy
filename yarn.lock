@@ -1284,9 +1284,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aj-designer@workspace:.":
+"aj-alchemy@workspace:.":
   version: 0.0.0-use.local
-  resolution: "aj-designer@workspace:."
+  resolution: "aj-alchemy@workspace:."
   dependencies:
     "@emotion/react": ^11.10.6
     "@emotion/styled": ^11.10.6
