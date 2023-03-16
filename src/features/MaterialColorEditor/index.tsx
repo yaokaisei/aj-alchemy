@@ -5,7 +5,7 @@ import type { MaterialName } from '@src/types/material';
 import { useMaterial } from '@src/stores/materialState';
 import { ColorPalletButton, ColorPicker } from '@src/components';
 
-import { CustomArea, ToggleButtons, WrapperColorPicker } from './style';
+import { ColorPalletButtons, CustomArea } from './style';
 
 /**
  * マテリアルカラー編集機能
@@ -16,30 +16,28 @@ export const MaterialColorEditor: React.FC = () => {
     useState<MaterialName>('Foxing');
 
   return (
-    <WrapperColorPicker>
-      <CustomArea>
-        <ColorPicker
-          color={getMaterialColor(isCurrentMaterialKey)}
-          presetColors={[]}
-          onChange={(newColor: string) => {
-            setMaterialColor({ name: isCurrentMaterialKey, color: newColor });
-          }}
-        />
+    <CustomArea>
+      <ColorPicker
+        color={getMaterialColor(isCurrentMaterialKey)}
+        presetColors={[]}
+        onChange={(newColor: string) => {
+          setMaterialColor({ name: isCurrentMaterialKey, color: newColor });
+        }}
+      />
 
-        <ToggleButtons>
-          {materials.map(({ name, color }, index) => (
-            <ColorPalletButton
-              key={index}
-              label={name}
-              color={color}
-              active={isCurrentMaterialKey === name}
-              onClick={() => {
-                toggleCurrentMaterialKey(name);
-              }}
-            />
-          ))}
-        </ToggleButtons>
-      </CustomArea>
-    </WrapperColorPicker>
+      <ColorPalletButtons>
+        {materials.map(({ name, color }, index) => (
+          <ColorPalletButton
+            key={index}
+            label={name}
+            color={color}
+            active={isCurrentMaterialKey === name}
+            onClick={() => {
+              toggleCurrentMaterialKey(name);
+            }}
+          />
+        ))}
+      </ColorPalletButtons>
+    </CustomArea>
   );
 };
