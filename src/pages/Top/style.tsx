@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.div`
+export const EditorWrapper = styled.div`
+  display: grid;
+  overflow: hidden;
+  gap: 20px;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  /* TODO: テーマで管理する */
-  background: linear-gradient(180deg, #232323, #121212);
 `;
