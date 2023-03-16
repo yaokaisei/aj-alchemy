@@ -12,28 +12,10 @@ export const Wrapper = styled.div`
   color: #b3b3b3; /* TODO: テーマで管理する */
 `;
 
-export const Header = styled.header`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  min-height: ${FIXED_MIN_HEIGHT};
-  display: flex;
-  align-items: center;
-`;
-
 export const Main = styled.main`
   display: flex;
   height: 100vh;
-  padding: ${FIXED_MIN_HEIGHT} 0; // TODO: 仮なので調整する
-`;
-
-export const Footer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  min-height: ${FIXED_MIN_HEIGHT};
-  display: flex;
-  align-items: center;
+  padding: 100px 0 ${FIXED_MIN_HEIGHT}; // TODO: 仮なので調整する
 `;
 
 export const EditorChildrenWrapper = styled.div`
@@ -41,6 +23,7 @@ export const EditorChildrenWrapper = styled.div`
 `;
 
 export const ChildrenWrapper = styled.div`
+  position: relative;
   flex: auto;
   width: 70%;
   height: 100%;

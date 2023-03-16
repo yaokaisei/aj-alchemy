@@ -12,7 +12,6 @@ export const Top: React.FC = () => {
       editorChildren={
         <EditorWrapper>
           <MaterialColorResetButton />
-          <MaterialColorResetButton />
           <MaterialColorEditor />
           <MaterialColorPreset />
         </EditorWrapper>

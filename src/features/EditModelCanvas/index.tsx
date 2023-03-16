@@ -9,17 +9,17 @@ import { Aj1Model, Stage } from '@src/components';
 export const EditModelCanvas: React.FC = () => {
   return (
     <Canvas flat dpr={window.devicePixelRatio}>
-      <PerspectiveCamera makeDefault position={[-10, Math.PI / 5, 20]} />
-      <OrbitControls
-        makeDefault
-        enablePan={false}
-        enableZoom
-        maxPolarAngle={Math.PI / 1}
-        minPolarAngle={Math.PI / 6}
-        maxDistance={12}
-        minDistance={5}
-      />
       <Stage position={[0, 0.9, 0]} intensity={0}>
+        <PerspectiveCamera makeDefault position={[-10, Math.PI / 5, 20]} />
+        <OrbitControls
+          makeDefault
+          enablePan={false}
+          enableZoom
+          maxPolarAngle={Math.PI / 1}
+          minPolarAngle={Math.PI / 6}
+          maxDistance={12}
+          minDistance={5}
+        />
         <Aj1Model rotation={[0, 0, 0.2]} />
       </Stage>
     </Canvas>
