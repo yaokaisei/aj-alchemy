@@ -2,3 +2,6 @@
 export * from './Buttons/ColorIconButton';
 export * from './Buttons/ColorPalletButton';
 export * from './ColorPicker';
+export * from './Layout';
+export * from './R3fCanvasItems/Aj1Model';
+export * from './R3fCanvasItems/Stage';
