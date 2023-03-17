@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <HeaderLogo>
-        <Link to="/">
+        <Link to="/aj-alchemy">
           <img src="/aj-alchemy/svg/logo.svg" alt="AIR JORDAN Alchemy" />
         </Link>
       </HeaderLogo>
