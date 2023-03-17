@@ -66,12 +66,12 @@ export const Header: React.FC = () => {
     <HeaderWrapper>
       <HeaderLogo>
         <Link to="/">
-          <img src="/svg/logo.svg" alt="AIR JORDAN Alchemy" />
+          <img src="/aj-alchemy/svg/logo.svg" alt="AIR JORDAN Alchemy" />
         </Link>
       </HeaderLogo>
 
       <HeaderContents>
-        <StyledLink to="/share">GOT'EM SHARE</StyledLink>
+        <StyledLink to="./share">GOT'EM SHARE</StyledLink>
 
         <StyledButton
           onClick={() => {

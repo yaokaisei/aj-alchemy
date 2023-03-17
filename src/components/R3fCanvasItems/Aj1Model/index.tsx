@@ -80,7 +80,7 @@ type GLTFResult = GLTF & {
 };
 
 /** glbファイルのパス */
-const MODEL_PATH = '/gltf/model_air-jordan-1.gltf';
+const MODEL_PATH = '/aj-alchemy/gltf/model_air-jordan-1.gltf';
 
 export const Aj1Model: React.FC<GroupProps> = ({ ...props }): JSX.Element => {
   const { nodes, materials } = useGLTF(MODEL_PATH) as unknown as GLTFResult;

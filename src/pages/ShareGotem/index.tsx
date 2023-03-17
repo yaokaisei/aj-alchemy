@@ -16,7 +16,7 @@ export const ShareGotem: React.FC = () => {
   return (
     <Layout>
       <HeadingImage isActive={active}>
-        <img src="/svg/decoration_text-gotem.svg" alt="GOT'EM" />
+        <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
       </HeadingImage>
 
       <CanvasWrapper isActive={active}>
