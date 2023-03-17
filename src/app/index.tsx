@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <RecoilRoot>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Top />} />
-          <Route path="/share" element={<ShareGotem />} />
+          <Route path="/aj-alchemy" element={<Top />} />
+          <Route path="/aj-alchemy/share" element={<ShareGotem />} />
         </Routes>
       </BrowserRouter>
     </RecoilRoot>
