@@ -19,7 +19,9 @@ export const Main = styled.main`
 `;
 
 export const EditorChildrenWrapper = styled.div`
-  width: min(30%, 600px);
+  width: min(30%, 620px);
+  overflow: auto;
+  padding: 0 20px; // TODO: 仮なので調整する
 `;
 
 export const ChildrenWrapper = styled.div`
