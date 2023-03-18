@@ -1,6 +1,6 @@
 import type React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, useProgress } from '@react-three/drei';
+import { Loader, PerspectiveCamera, useProgress } from '@react-three/drei';
 import { Aj1Model, Layout, Stage } from '@src/components';
 import {
   Button,
@@ -15,6 +15,8 @@ export const ShareGotem: React.FC = () => {
 
   return (
     <Layout>
+      <Loader />
+
       <HeadingImage isActive={active}>
         <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
       </HeadingImage>
