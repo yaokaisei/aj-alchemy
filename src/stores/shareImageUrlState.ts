@@ -3,26 +3,26 @@ import { atom, useRecoilState, type SetterOrUpdater } from 'recoil';
 /* =======================================
  * Atom
  ======================================= */
-const screenshotUrlState = atom({
-  key: 'screenshotUrlState',
+const shareImageUrlState = atom({
+  key: 'shareImageUrlState',
   default: '',
 });
 
 /* =======================================
  * Hooks
  ======================================= */
-interface UseScreenshotUrl {
+interface UseShareImageUrl {
   /** スクリーンショットとして保存するURL */
-  screenshotUrl: string;
+  shareImageUrl: string;
   /** スクリーンショットとして保存するURLを更新する */
-  setScreenshotUrl: SetterOrUpdater<string>;
+  setShareImageUrl: SetterOrUpdater<string>;
 }
 
-export const useScreenshotUrl = (): UseScreenshotUrl => {
-  const [screenshotUrl, setScreenshotUrl] = useRecoilState(screenshotUrlState);
+export const useShareImageUrl = (): UseShareImageUrl => {
+  const [shareImageUrl, setShareImageUrl] = useRecoilState(shareImageUrlState);
 
   return {
-    screenshotUrl,
-    setScreenshotUrl,
+    shareImageUrl,
+    setShareImageUrl,
   };
 };

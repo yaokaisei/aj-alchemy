@@ -57,10 +57,6 @@ const StyledLink = styled(Link)`
   ${styleLinkButton}
 `;
 
-const StyledButton = styled.button`
-  ${styleLinkButton}
-`;
-
 export const Header: React.FC = () => {
   return (
     <HeaderWrapper>
@@ -72,14 +68,6 @@ export const Header: React.FC = () => {
 
       <HeaderContents>
         <StyledLink to="./share">GOT'EM SHARE</StyledLink>
-
-        <StyledButton
-          onClick={() => {
-            console.log('モーダル展開');
-          }}
-        >
-          SAVE IMAGE
-        </StyledButton>
       </HeaderContents>
     </HeaderWrapper>
   );
