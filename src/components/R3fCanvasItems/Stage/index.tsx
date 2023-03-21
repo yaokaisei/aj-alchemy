@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import type React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import { Center, useBounds, Bounds } from '@react-three/drei';
+import { Center, Bounds } from '@react-three/drei';
 import type {
   ContactShadowsProps,
   CenterProps,
@@ -35,17 +35,6 @@ interface StageProps {
   center?: Partial<CenterProps>;
 }
 
-const Refit: React.FC<{
-  radius: number;
-  adjustCamera: boolean;
-}> = ({ radius, adjustCamera }) => {
-  const api = useBounds();
-  useEffect(() => {
-    if (adjustCamera) api.refresh().clip().fit();
-  }, [radius, adjustCamera, api]);
-  return null;
-};
-
 export const Stage: React.FC<JSX.IntrinsicElements['group'] & StageProps> = ({
   children,
   center,
@@ -67,7 +56,6 @@ export const Stage: React.FC<JSX.IntrinsicElements['group'] & StageProps> = ({
       <ambientLight intensity={0.2} />
 
       <Bounds fit={adjustCamera} margin={1} observe {...props}>
-        <Refit radius={radius} adjustCamera={adjustCamera} />
         <Center
           {...center}
           onCentered={(props) => {
