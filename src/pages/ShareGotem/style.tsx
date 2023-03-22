@@ -10,24 +10,22 @@ export const Wrapper = styled.div<{ isActive?: boolean }>`
 `;
 
 export const CanvasWrapper = styled.div<{ isActive: boolean }>`
-  height: 100%;
-  opacity: 1;
-  transition: opacity 1s ease;
-
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      opacity: 0;
-    `}
+  position: absolute;
+  top: 100px; // TODO: ヘッダーの高さに合わせる
+  left: 50%;
+  transform: translate(-50%, -100px);
+  width: 100%;
+  height: 60svh;
 `;
 
 export const HeadingImage = styled.h1<{ isActive: boolean }>`
   position: absolute;
   width: 100%;
+  height: 100%;
   margin: 0;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, 0%);
 
   ${({ isActive }) =>
     isActive
@@ -36,39 +34,33 @@ export const HeadingImage = styled.h1<{ isActive: boolean }>`
         `
       : css`
           animation-name: Bounce;
-          animation-duration: 0.7s;
+          animation-duration: 0.8s;
           animation-timing-function: cubic-bezier(0, 0, 0, 1.7);
 
           @keyframes Bounce {
             0% {
               opacity: 0;
-              transform: translate(-50%, -150%);
+              transform: translate(-50%, -50%);
             }
             100% {
               opacity: 1;
-              transform: translate(-50%, -100%);
+              transform: translate(-50%, 0%);
             }
           }
         `}
 
   img {
     width: min(60%, 580px);
+    height: 50%;
     margin: auto;
   }
 `;
 
 export const ContentsWrapper = styled.div`
-  position: absolute;
-  width: 100%;
-  max-height: 20%;
-  bottom: 0;
-  padding: 25px 0;
-  text-align: center;
-  min-height: 200px;
-  display: grid;
-  justify-content: center;
-  align-items: baseline;
-  gap: 16px;
+  padding: 48px 20px 20px;
+  margin-top: 60svh;
+  box-shadow: 0px -18px 24px rgb(0 0 0 / 30%); //TODO: 仮スタイル
+  border-radius: 30px 30px 0 0;
 `;
 
 export const ContentsHeading = styled.h2`

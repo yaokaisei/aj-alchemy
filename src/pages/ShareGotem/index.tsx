@@ -16,15 +16,13 @@ export const ShareGotem: React.FC = () => {
   return (
     <Layout>
       <Loader />
-
-      <HeadingImage isActive={active}>
-        <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
-      </HeadingImage>
-
       <CanvasWrapper isActive={active}>
+        <HeadingImage isActive={active}>
+          <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
+        </HeadingImage>
         <Canvas flat>
           <Stage>
-            <PerspectiveCamera makeDefault position={[-0.3, Math.PI / 5, 80]} />
+            <PerspectiveCamera makeDefault position={[0.3, Math.PI / 5, 80]} />
             <Aj1Model
               clickZooom={false}
               position={[0, 0.36, 0]}
@@ -32,12 +30,15 @@ export const ShareGotem: React.FC = () => {
             />
           </Stage>
         </Canvas>
-
-        <ContentsWrapper>
-          <ContentsHeading>エアージョーダン 1 HIGH OG</ContentsHeading>
-          <Button>共有する</Button>
-        </ContentsWrapper>
       </CanvasWrapper>
+
+      <ContentsWrapper>
+        <ContentsHeading>エアージョーダン 1 HIGH OG</ContentsHeading>
+        <p>
+          共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります
+        </p>
+        <Button>共有する</Button>
+      </ContentsWrapper>
     </Layout>
   );
 };

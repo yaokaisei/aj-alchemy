@@ -1,5 +1,5 @@
 import type React from 'react';
-import { EditorWrapper } from './style';
+import { EditorWrapper, Wrapper } from './style';
 import { Layout } from '@src/components';
 import { MaterialColorEditor } from '@src/features/MaterialColorEditor';
 import { EditModelCanvas } from '@src/features/EditModelCanvas';
@@ -19,7 +19,9 @@ export const Top: React.FC = () => {
         </EditorWrapper>
       }
     >
-      <EditModelCanvas />
+      <Wrapper>
+        <EditModelCanvas />
+      </Wrapper>
     </Layout>
   );
 };

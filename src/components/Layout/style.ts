@@ -13,9 +13,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Main = styled.main`
+  position: relative;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   padding: 100px 0 ${FIXED_MIN_HEIGHT}; // TODO: 仮なので調整する
+  z-index: 1;
 `;
 
 export const EditorChildrenWrapper = styled.div`

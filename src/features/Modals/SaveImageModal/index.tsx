@@ -1,6 +1,6 @@
 import type React from 'react';
 import { Dialog, ColorPicker } from '@src/components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ShareImage } from '@src/features/shareImageCreater';
 import { Wrapper } from './style';
 import { useShareImageBgColor } from '@src/stores/shareImageBgColorState';

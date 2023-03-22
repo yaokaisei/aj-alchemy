@@ -11,6 +11,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   justify-content: flex-end;
   padding: 0 20px; // TODO: 仮なので調整する
+  z-index: 2;
 
   a {
     color: #fff;

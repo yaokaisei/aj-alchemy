@@ -14,6 +14,7 @@ const HeaderWrapper = styled.header`
   padding: 0 20px; // TODO: 仮なので調整する
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 `;
 
 const HeaderLogo = styled.h1`
