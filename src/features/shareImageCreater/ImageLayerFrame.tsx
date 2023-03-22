@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const CANVAS_WIDTH = 1200;
 const CANVAS_HEIGHT = 1200;
-const CANVAS_TEXT = 'NOT FOR SALE | MAEK BY @AIR JORDAN DESIGN';
+const CANVAS_TEXT = 'NOT FOR SALE | MAEK BY @AIR JORDAN ALCHEMY';
 const BG_COLOR = '#232323';
 const FONT_SIZE = 16;
 const FONT_COLOR = '#d9d9d9';
