@@ -55,15 +55,10 @@ interface ImageLayerFrameProps {
    * レイヤーを重ねたい画像パス
    */
   imagePath: string;
-  /**
-   * レイヤーを重ねて生成した新しい画像をBase64形式でセット
-   */
-  setDataUrl: (url: string) => void;
 }
 
 export const ImageLayerFrame: React.FC<ImageLayerFrameProps> = ({
   imagePath,
-  setDataUrl,
 }) => {
   const [imgSrc, setImgSrc] = useState('');
   const { shareImageBgColor, setShareImageBgColor } = useShareImageBgColor();
@@ -81,15 +76,13 @@ export const ImageLayerFrame: React.FC<ImageLayerFrameProps> = ({
 
     if (canvasContext == null) return;
 
-    // TODO: リアクティブに色が変更されない問題を解消する
     drowBgColor(canvasContext, shareImageBgColor);
     drawText(canvasContext);
     drowImage(canvasContext, imagePath, () => {
       const dataUrl = canvasElem.toDataURL();
       setImgSrc(dataUrl);
-      setDataUrl(dataUrl);
     });
-  }, [imagePath, setDataUrl, shareImageBgColor]);
+  }, [imagePath, shareImageBgColor]);
 
   return <img src={imgSrc} alt="" />;
 };

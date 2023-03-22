@@ -8,6 +8,7 @@ import { Aj1Model, Stage } from '@src/components';
 import { Wrapper, CanvasWrapper, ContentsWrapper } from './style';
 import { ImageLayerFrame } from './ImageLayerFrame';
 import { useMaterial } from '@src/stores/materialState';
+import { PerspectiveCamera } from '@react-three/drei';
 
 const Scene: React.FC = () => {
   const { gl, scene, camera } = useThree();
@@ -22,30 +23,24 @@ const Scene: React.FC = () => {
 
   return (
     <Stage>
-      <Aj1Model rotation={[0, 0, -0.01]} />
+      <Aj1Model position={[0, 0.36, 0]} rotation={[0, 0.6, 0.2]} />
     </Stage>
   );
 };
 
 export const ShareImage: React.FC = () => {
-  const { shareImageUrl, setShareImageUrl } = useShareImageUrl();
+  const { shareImageUrl } = useShareImageUrl();
 
   return (
     <Wrapper>
       <CanvasWrapper>
-        <Canvas
-          flat
-          gl={{ preserveDrawingBuffer: true }}
-          camera={{ position: [-3.5, 0, 5], fov: 60 }}
-        >
+        <Canvas flat>
+          <PerspectiveCamera makeDefault position={[0, 0, 7]} />
           <Scene />
         </Canvas>
       </CanvasWrapper>
       <ContentsWrapper>
-        <ImageLayerFrame
-          imagePath={shareImageUrl}
-          setDataUrl={setShareImageUrl}
-        />
+        <ImageLayerFrame imagePath={shareImageUrl} />
       </ContentsWrapper>
     </Wrapper>
   );
