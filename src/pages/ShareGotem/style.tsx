@@ -11,7 +11,7 @@ export const Wrapper = styled.div<{ isActive?: boolean }>`
 
 export const CanvasWrapper = styled.div<{ isActive: boolean }>`
   position: absolute;
-  top: 100px; // TODO: ヘッダーの高さに合わせる
+  top: 200px; // TODO: ヘッダーの高さに合わせる
   left: 50%;
   transform: translate(-50%, -100px);
   width: 100%;

@@ -8,9 +8,9 @@ import { Aj1Model, Stage } from '@src/components';
  */
 export const EditModelCanvas: React.FC = () => {
   return (
-    <Canvas flat dpr={window.devicePixelRatio}>
-      <Stage position={[0, 0.9, 0]} intensity={0}>
-        <PerspectiveCamera makeDefault position={[-10, Math.PI / 5, 20]} />
+    <Canvas flat>
+      <Stage>
+        <PerspectiveCamera makeDefault position={[-10, Math.PI / 2, 20]} />
         <OrbitControls
           makeDefault
           enablePan={false}

@@ -6,10 +6,11 @@ import { EditModelCanvas } from '@src/features/EditModelCanvas';
 import { MaterialColorResetButton } from '@src/features/MaterialColorResetButton';
 import { MaterialColorPreset } from '@src/features/MaterialColorPreset';
 import { SaveImageModal } from '@src/features/Modals/SaveImageModal';
+import { TopLayout } from '@src/components/Layout/TopLayout';
 
 export const Top: React.FC = () => {
   return (
-    <Layout
+    <TopLayout
       editorChildren={
         <EditorWrapper>
           <SaveImageModal />
@@ -22,6 +23,6 @@ export const Top: React.FC = () => {
       <Wrapper>
         <EditModelCanvas />
       </Wrapper>
-    </Layout>
+    </TopLayout>
   );
 };

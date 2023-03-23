@@ -14,10 +14,16 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   position: relative;
-  display: flex;
+  height: 100%;
   min-height: 100vh;
   padding: 100px 0 ${FIXED_MIN_HEIGHT}; // TODO: 仮なので調整する
   z-index: 1;
+`;
+
+export const TopContentsWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 160px);
 `;
 
 export const EditorChildrenWrapper = styled.div`

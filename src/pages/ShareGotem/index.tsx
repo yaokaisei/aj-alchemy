@@ -22,12 +22,8 @@ export const ShareGotem: React.FC = () => {
         </HeadingImage>
         <Canvas flat>
           <Stage>
-            <PerspectiveCamera makeDefault position={[0.3, Math.PI / 5, 80]} />
-            <Aj1Model
-              clickZooom={false}
-              position={[0, 0.36, 0]}
-              rotation={[0, 0.7, -0.01]}
-            />
+            <PerspectiveCamera makeDefault position={[-2, 0, 3]} />
+            <Aj1Model clickZooom={false} />
           </Stage>
         </Canvas>
       </CanvasWrapper>
