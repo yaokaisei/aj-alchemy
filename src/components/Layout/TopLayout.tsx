@@ -4,7 +4,7 @@ import { Layout } from '.';
 import {
   ChildrenWrapper,
   EditorChildrenWrapper,
-  TopContentsWrapper,
+  TopLayoutWrapper,
 } from './style';
 
 interface LayoutProps {
@@ -18,13 +18,13 @@ export const TopLayout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <Layout>
-      <TopContentsWrapper>
+      <TopLayoutWrapper>
         {Boolean(editorChildren) && (
           <EditorChildrenWrapper>{editorChildren}</EditorChildrenWrapper>
         )}
 
         <ChildrenWrapper>{children}</ChildrenWrapper>
-      </TopContentsWrapper>
+      </TopLayoutWrapper>
     </Layout>
   );
 };

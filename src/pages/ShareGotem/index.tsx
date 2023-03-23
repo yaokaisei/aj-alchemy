@@ -8,6 +8,7 @@ import {
   ContentsHeading,
   ContentsWrapper,
   HeadingImage,
+  Wrapper,
 } from './style';
 
 export const ShareGotem: React.FC = () => {
@@ -15,26 +16,28 @@ export const ShareGotem: React.FC = () => {
 
   return (
     <Layout>
-      <Loader />
-      <CanvasWrapper isActive={active}>
-        <HeadingImage isActive={active}>
-          <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
-        </HeadingImage>
-        <Canvas flat>
-          <Stage>
-            <PerspectiveCamera makeDefault position={[-2, 0, 3]} />
-            <Aj1Model clickZooom={false} />
-          </Stage>
-        </Canvas>
-      </CanvasWrapper>
+      <Wrapper>
+        <Loader />
+        <CanvasWrapper isActive={active}>
+          <HeadingImage isActive={active}>
+            <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
+          </HeadingImage>
+          <Canvas flat>
+            <Stage>
+              <PerspectiveCamera makeDefault position={[-2, 0, 3]} />
+              <Aj1Model clickZooom={false} />
+            </Stage>
+          </Canvas>
+        </CanvasWrapper>
 
-      <ContentsWrapper>
-        <ContentsHeading>エアージョーダン 1 HIGH OG</ContentsHeading>
-        <p>
-          共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります
-        </p>
-        <Button>共有する</Button>
-      </ContentsWrapper>
+        <ContentsWrapper>
+          <ContentsHeading>エアージョーダン 1 HIGH OG</ContentsHeading>
+          <p>
+            共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります共有ページの説明・画像生成機能が入ります
+          </p>
+          <Button>共有する</Button>
+        </ContentsWrapper>
+      </Wrapper>
     </Layout>
   );
 };

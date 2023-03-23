@@ -3,17 +3,14 @@ import styled from '@emotion/styled';
 
 export const Wrapper = styled.div<{ isActive?: boolean }>`
   position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  background: #232323;
+  padding-top: 60svh;
 `;
 
 export const CanvasWrapper = styled.div<{ isActive: boolean }>`
   position: absolute;
-  top: 200px; // TODO: ヘッダーの高さに合わせる
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -100px);
+  transform: translate(-50%, 0);
   width: 100%;
   height: 60svh;
 `;
@@ -58,7 +55,6 @@ export const HeadingImage = styled.h1<{ isActive: boolean }>`
 
 export const ContentsWrapper = styled.div`
   padding: 48px 20px 20px;
-  margin-top: 60svh;
   box-shadow: 0px -18px 24px rgb(0 0 0 / 30%); //TODO: 仮スタイル
   border-radius: 30px 30px 0 0;
 `;
