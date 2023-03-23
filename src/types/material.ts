@@ -2,21 +2,21 @@
  * マテリアルを構成する部品名
  */
 export type MaterialKey =
-  | 'foxing'
-  | 'healOverlay'
-  | 'heal'
-  | 'quarter'
-  | 'sole'
-  | 'quarterOverlay'
-  | 'tip'
-  | 'vamp'
-  | 'label'
-  | 'logo'
-  | 'eyestay'
-  | 'swoosh'
-  | 'midsole'
-  | 'laces'
-  | 'tongue';
+  | 'Koxing'
+  | 'HealOverlay'
+  | 'Heal'
+  | 'Quarter'
+  | 'Sole'
+  | 'QuarterOverlay'
+  | 'Tip'
+  | 'Vamp'
+  | 'Label'
+  | 'Logo'
+  | 'Eyestay'
+  | 'Swoosh'
+  | 'Midsole'
+  | 'Laces'
+  | 'Tongue';
 
 export type MaterialName =
   | 'Foxing'

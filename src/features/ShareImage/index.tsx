@@ -23,7 +23,7 @@ const Scene: React.FC = () => {
 
   return (
     <Stage>
-      <Aj1Model rotation={[0, 0.5, 0]} />
+      <Aj1Model rotation={[0, 0.5, 0.2]} />
     </Stage>
   );
 };

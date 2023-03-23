@@ -1,3 +1,4 @@
+import { Loader } from '@react-three/drei';
 import type React from 'react';
 import { type ReactNode } from 'react';
 import { Footer } from './Footer';
@@ -10,10 +11,13 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <Wrapper>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </Wrapper>
+    <>
+      <Loader />
+      <Wrapper>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </Wrapper>
+    </>
   );
 };
