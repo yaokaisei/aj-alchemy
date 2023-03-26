@@ -1,4 +1,3 @@
-import { PRESET_DEFAULT } from '@src/config/materialPreset';
 import { type Material } from '@src/types/material';
 import {
   PRESET_BRED,

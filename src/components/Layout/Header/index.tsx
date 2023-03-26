@@ -1,6 +1,6 @@
+import type React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import type React from 'react';
 import { Link } from 'react-router-dom';
 
 const HeaderWrapper = styled.header`
@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
       </HeaderLogo>
 
       <HeaderContents>
-        <StyledLink to="./share">GOT'EM SHARE</StyledLink>
+        <StyledLink to="./share">GOT’EM SHARE</StyledLink>
       </HeaderContents>
     </HeaderWrapper>
   );

@@ -1,9 +1,9 @@
 import type React from 'react';
-import { Dialog, ColorPicker } from '@src/components';
 import { useState } from 'react';
+import { Dialog, ColorPicker } from '@src/components';
 import { ShareImage } from '@src/features/ShareImage';
-import { Wrapper } from './style';
 import { useShareImageBgColor } from '@src/stores/shareImageBgColorState';
+import { Wrapper } from './style';
 
 export const SaveImageModal: React.FC = () => {
   const [showModal, setShowModal] = useState(false);

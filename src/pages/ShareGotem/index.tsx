@@ -1,6 +1,6 @@
 import type React from 'react';
-import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera, useProgress } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 import { Aj1Model, Layout, Stage } from '@src/components';
 import {
   Button,

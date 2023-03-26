@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unknown-property */
-import type React from 'react';
-import { useState } from 'react';
-
-import { Center, Bounds, ContactShadows } from '@react-three/drei';
 import type { ContactShadowsProps, CenterProps } from '@react-three/drei';
+import type React from 'react';
+import { Center, Bounds, ContactShadows } from '@react-three/drei';
+import { useState } from 'react';
 
 type StageShadows = Partial<ContactShadowsProps> & {
   offset?: number;

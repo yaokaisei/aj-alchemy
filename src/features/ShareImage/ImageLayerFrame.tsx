@@ -1,6 +1,6 @@
-import { useShareImageBgColor } from '@src/stores/shareImageBgColorState';
 import type React from 'react';
 import { useEffect, useState } from 'react';
+import { useShareImageBgColor } from '@src/stores/shareImageBgColorState';
 
 const CANVAS_WIDTH = 1200;
 const CANVAS_HEIGHT = 1200;

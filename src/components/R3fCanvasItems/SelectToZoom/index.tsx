@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unknown-property */
-import { type ThreeEvent } from '@react-three/fiber';
-import { useBounds } from '@react-three/drei';
+import type { ThreeEvent } from '@react-three/fiber';
 import type React from 'react';
-import { type Mesh } from 'three';
+import type { Mesh } from 'three';
+import { useBounds } from '@react-three/drei';
 
 interface SelectToZoomProps {
   children: React.ReactNode;

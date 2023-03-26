@@ -1,8 +1,9 @@
+
+import type { MaterialName, Material } from '@src/types/material';
 import { useEffect } from 'react';
 import { atom, useRecoilState, type SetterOrUpdater } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 import { PRESET_DEFAULT } from '@src/config/materialPreset';
-import type { MaterialName, Material } from '@src/types/material';
 
 /* =======================================
  * Atom

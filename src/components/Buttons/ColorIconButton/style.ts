@@ -1,5 +1,5 @@
+import type { ColorIconButtonProps } from '.';
 import styled from '@emotion/styled';
-import { type ColorIconButtonProps } from '.';
 
 export const StyledButton = styled.button<ColorIconButtonProps>`
   overflow: hidden;

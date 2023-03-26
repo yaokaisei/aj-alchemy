@@ -1,14 +1,12 @@
 import type React from 'react';
-import { useEffect } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-
-import { useShareImageUrl } from '@src/stores/shareImageUrlState';
-import { Aj1Model, Stage } from '@src/components';
-
-import { Wrapper, CanvasWrapper, ContentsWrapper } from './style';
-import { ImageLayerFrame } from './ImageLayerFrame';
-import { useMaterial } from '@src/stores/materialState';
 import { PerspectiveCamera } from '@react-three/drei';
+import { Canvas, useThree } from '@react-three/fiber';
+import { useEffect } from 'react';
+import { Aj1Model, Stage } from '@src/components';
+import { useMaterial } from '@src/stores/materialState';
+import { useShareImageUrl } from '@src/stores/shareImageUrlState';
+import { ImageLayerFrame } from './ImageLayerFrame';
+import { Wrapper, CanvasWrapper, ContentsWrapper } from './style';
 
 const Scene: React.FC = () => {
   const { gl, scene, camera } = useThree();

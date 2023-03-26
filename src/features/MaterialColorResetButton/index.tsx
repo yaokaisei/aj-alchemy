@@ -1,6 +1,6 @@
 import type React from 'react';
-import { useMaterial } from '@src/stores/materialState';
 import { PRESET_DEFAULT } from '@src/config/materialPreset';
+import { useMaterial } from '@src/stores/materialState';
 
 export const MaterialColorResetButton: React.FC = () => {
   const { setMaterials } = useMaterial();

@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
 import type React from 'react';
+import styled from '@emotion/styled';
 
 const FooterWrapper = styled.footer`
   position: fixed;

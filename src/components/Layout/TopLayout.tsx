@@ -1,11 +1,11 @@
 import type React from 'react';
-import { type ReactNode } from 'react';
-import { Layout } from '.';
+import type { ReactNode } from 'react';
 import {
   ChildrenWrapper,
   EditorChildrenWrapper,
   TopLayoutWrapper,
 } from './style';
+import { Layout } from '.';
 
 interface LayoutProps {
   children: ReactNode;

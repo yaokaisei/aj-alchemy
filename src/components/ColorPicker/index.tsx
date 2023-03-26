@@ -1,7 +1,7 @@
 import type React from 'react';
+import type { ColorPickerBaseProps } from 'react-colorful/dist/types';
 import { useState } from 'react';
 import { HexColorInput, HexColorPicker } from 'react-colorful';
-import { type ColorPickerBaseProps } from 'react-colorful/dist/types';
 import { ColorIconButton } from '@src/components';
 import { StylePresetColors, Wrapper } from './style';
 

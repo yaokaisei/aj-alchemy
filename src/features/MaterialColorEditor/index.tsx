@@ -1,10 +1,8 @@
+import type { MaterialName } from '@src/types/material';
 import type React from 'react';
 import { useState } from 'react';
-
-import type { MaterialName } from '@src/types/material';
-import { useMaterial } from '@src/stores/materialState';
 import { ColorPalletButton, ColorPicker } from '@src/components';
-
+import { useMaterial } from '@src/stores/materialState';
 import { ColorPalletButtons, CustomArea } from './style';
 
 /**
