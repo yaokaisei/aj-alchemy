@@ -15,6 +15,8 @@ parserOptions:
   project: './tsconfig.json'
 plugins:
   - react-hooks
+  - import
+  - unused-imports
 rules:
   react/jsx-one-expression-per-line: 0
   react/jsx-filename-extension:
@@ -27,6 +29,33 @@ rules:
     - namedComponents: arrow-function
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: warn
+  unused-imports/no-unused-imports: error
+  import/no-unresolved: 0
+  import/extensions: 0
+  import/no-extraneous-dependencies: 0
+  import/no-cycle: 0
+  import/no-self-import: 0
+  import/order:
+    - 2
+    - groups:
+        - type
+        - builtin
+        - external
+        - internal
+        - parent
+        - sibling
+        - index
+      pathGroups:
+        - pattern: '@src/components/**'
+          group: internal
+          position: before
+        - pattern: '@src/store/**'
+          group: internal
+          position: before
+      alphabetize:
+        order: asc
+        caseInsensitive: true
+      newlines-between: never
 settings:
   react:
     version: '18.2.0'
