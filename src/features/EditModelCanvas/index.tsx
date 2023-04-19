@@ -1,6 +1,7 @@
 import type React from 'react';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { SelectToZoom } from '@src/components/R3fCanvasItems/SelectToZoom';
 import { Aj1Model, Stage } from '@src/components';
 
 /**
@@ -20,7 +21,9 @@ export const EditModelCanvas: React.FC = () => {
           maxDistance={12}
           minDistance={5}
         />
-        <Aj1Model rotation={[0, 0, 0.2]} />
+        <SelectToZoom>
+          <Aj1Model rotation={[0, 0, 0.2]} />
+        </SelectToZoom>
       </Stage>
     </Canvas>
   );

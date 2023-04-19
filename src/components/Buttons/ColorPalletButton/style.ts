@@ -16,6 +16,9 @@ export const StyledButton = styled.button<ColorPalletButtonProps>`
   transition: transform 0.3s ease-in-out;
   ${({ active }) => css`
     transform: translateY(${active ?? false ? '-8px' : '0'});
+    background-color: ${active ?? false
+      ? 'red'
+      : ''}; // TODO：デバック用なので削除する
   `}
   &::before {
     content: '';

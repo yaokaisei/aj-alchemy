@@ -16,7 +16,8 @@ export type MaterialName =
   | 'Swoosh'
   | 'Midsole'
   | 'Laces'
-  | 'Tongue';
+  | 'Tongue'
+  | '';
 
 export interface Material {
   name: MaterialName;

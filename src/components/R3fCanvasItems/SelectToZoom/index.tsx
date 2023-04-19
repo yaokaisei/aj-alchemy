@@ -3,34 +3,52 @@ import type { ThreeEvent } from '@react-three/fiber';
 import type React from 'react';
 import type { Mesh } from 'three';
 import { useBounds } from '@react-three/drei';
+import { useEffect } from 'react';
+import { useCurrentMaterialName } from '@src/stores/currentMaterialNameState';
+import { useShowMaterialColorPickerState } from '@src/stores/showMaterialColorPickerState';
+import { type MaterialName } from '@src/types/material';
 
 interface SelectToZoomProps {
   children: React.ReactNode;
-  isZoom?: boolean;
 }
 
-export const SelectToZoom: React.FC<SelectToZoomProps> = ({
-  children,
-  isZoom = true,
-}) => {
+export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
+  const { currentMaterialName, setCurrentMaterialName } =
+    useCurrentMaterialName();
+  const { setShowMaterialColorPicker } = useShowMaterialColorPickerState();
+
   const api = useBounds();
 
+  // TODO: GlobalStateの参照をしないようにする
+  useEffect(() => {
+    if (currentMaterialName === '') {
+      api.refresh().fit();
+    }
+  }, [currentMaterialName, api]);
+
   const clickHandler = (e: ThreeEvent<MouseEvent>): void => {
-    if (!isZoom) return;
     e.stopPropagation();
 
-    // TODO: 選択したマテリアル名を取得して選択中のGlobalStateの値として更新できるようにする
-    const selectMaterialName: string = Object(e.object as Mesh).material.name;
-    console.log(selectMaterialName);
+    const selectMaterialName: MaterialName = Object(e.object as Mesh).material
+      .name;
+
+    if (currentMaterialName === selectMaterialName) return;
+    // TODO: propsでモデル箇所をクリックした時のイベントを実行できるようにする
+    // TODO: GlobalStateの更新はfeatureでおこなえるようにする
+    setCurrentMaterialName(selectMaterialName);
+    setShowMaterialColorPicker(true);
 
     if (e.delta <= 10) {
-      void api.refresh(e.object).fit();
+      api.refresh(e.object).fit();
     }
   };
 
   const pointerMissedHandler = (e: MouseEvent): void => {
-    if (!isZoom) return;
     e.button === 0 && api.refresh().fit();
+    // TODO: propsでモデル以外の箇所をクリックした時のイベントを実行できるようにする
+    // TODO: GlobalStateの更新はfeatureでおこなえるようにする
+    setCurrentMaterialName('');
+    setShowMaterialColorPicker(false);
   };
 
   return (

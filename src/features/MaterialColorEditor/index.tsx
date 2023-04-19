@@ -1,27 +1,32 @@
-import type { MaterialName } from '@src/types/material';
 import type React from 'react';
-import { useState } from 'react';
 import { ColorPalletButton, ColorPicker } from '@src/components';
+import { useCurrentMaterialName } from '@src/stores/currentMaterialNameState';
 import { useMaterial } from '@src/stores/materialState';
-import { ColorPalletButtons, CustomArea } from './style';
+import { useShowMaterialColorPickerState } from '@src/stores/showMaterialColorPickerState';
+import { ColorPalletButtons, CustomArea, ShowWrapper } from './style';
 
 /**
  * マテリアルカラー編集機能
  */
 export const MaterialColorEditor: React.FC = () => {
   const { materials, setMaterialColor, getMaterialColor } = useMaterial();
-  const [isCurrentMaterialKey, toggleCurrentMaterialKey] =
-    useState<MaterialName>('Foxing');
+  const { currentMaterialName, setCurrentMaterialName } =
+    useCurrentMaterialName();
+  const { showMaterialColorPicker, setShowMaterialColorPicker } =
+    useShowMaterialColorPickerState();
 
   return (
     <CustomArea>
-      <ColorPicker
-        color={getMaterialColor(isCurrentMaterialKey)}
-        presetColors={[]}
-        onChange={(newColor: string) => {
-          setMaterialColor({ name: isCurrentMaterialKey, color: newColor });
-        }}
-      />
+      {/* TODO：floating uiで実装する */}
+      <ShowWrapper isShow={showMaterialColorPicker}>
+        <ColorPicker
+          color={getMaterialColor(currentMaterialName)}
+          presetColors={[]}
+          onChange={(newColor: string) => {
+            setMaterialColor({ name: currentMaterialName, color: newColor });
+          }}
+        />
+      </ShowWrapper>
 
       <ColorPalletButtons>
         {materials.map(({ name, color }, index) => (
@@ -29,9 +34,15 @@ export const MaterialColorEditor: React.FC = () => {
             key={index}
             label={name}
             color={color}
-            active={isCurrentMaterialKey === name}
+            active={showMaterialColorPicker && currentMaterialName === name}
             onClick={() => {
-              toggleCurrentMaterialKey(name);
+              setCurrentMaterialName(name);
+              setShowMaterialColorPicker(true);
+
+              if (currentMaterialName === name) {
+                setCurrentMaterialName('');
+                setShowMaterialColorPicker(false);
+              }
             }}
           />
         ))}
