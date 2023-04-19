@@ -6,7 +6,7 @@ export const PRESET_DEFAULT = [
     color: '#ffffff',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#ffffff',
   },
   {
@@ -22,7 +22,7 @@ export const PRESET_DEFAULT = [
     color: '#ffffff',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#ffffff',
   },
   {

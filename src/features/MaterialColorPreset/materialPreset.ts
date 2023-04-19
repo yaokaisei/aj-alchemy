@@ -6,7 +6,7 @@ export const PRESET_CHICAGO = [
     color: '#a23a39',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#a23a39',
   },
   {
@@ -22,7 +22,7 @@ export const PRESET_CHICAGO = [
     color: '#a23a39',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#a23a39',
   },
   {
@@ -69,7 +69,7 @@ export const PRESET_BRED = [
     color: '#a23a39',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#a23a39',
   },
   {
@@ -85,7 +85,7 @@ export const PRESET_BRED = [
     color: '#a23a39',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {
@@ -132,7 +132,7 @@ export const PRESET_DARK_MOCHA = [
     color: '#544639',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#544639',
   },
   {
@@ -148,7 +148,7 @@ export const PRESET_DARK_MOCHA = [
     color: '#333333',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#544639',
   },
   {
@@ -195,7 +195,7 @@ export const PRESET_ROYAL = [
     color: '#053e8a',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#053e8a',
   },
   {
@@ -211,7 +211,7 @@ export const PRESET_ROYAL = [
     color: '#053e8a',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {
@@ -258,7 +258,7 @@ export const PRESET_SHADOW = [
     color: '#716f70',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#716f70',
   },
   {
@@ -274,7 +274,7 @@ export const PRESET_SHADOW = [
     color: '#151515',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {
@@ -321,7 +321,7 @@ export const PRESET_COURT_PURPLE = [
     color: '#34215c',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#34215c',
   },
   {
@@ -337,7 +337,7 @@ export const PRESET_COURT_PURPLE = [
     color: '#34215c',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {
@@ -384,7 +384,7 @@ export const PRESET_SHATTERED_BACKBORD = [
     color: '#e6621b',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#e6621b',
   },
   {
@@ -400,7 +400,7 @@ export const PRESET_SHATTERED_BACKBORD = [
     color: '#e6621b',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {
@@ -447,7 +447,7 @@ export const PRESET_CRIMSON_TINT = [
     color: '#e7bea2',
   },
   {
-    name: 'Heal Overlay',
+    name: 'HealOverlay',
     color: '#e7bea2',
   },
   {
@@ -463,7 +463,7 @@ export const PRESET_CRIMSON_TINT = [
     color: '#e7bea2',
   },
   {
-    name: 'Quarter Overlay',
+    name: 'QuarterOverlay',
     color: '#151515',
   },
   {

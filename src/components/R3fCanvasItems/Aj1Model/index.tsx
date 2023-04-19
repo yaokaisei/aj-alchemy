@@ -116,7 +116,7 @@ export const Aj1Model: React.FC<Aj1ModelProps> = ({
           <mesh
             geometry={nodes.leftBackMid.geometry}
             material={materials.HealOverlay}
-            material-color={getMaterialColor('Heal Overlay')}
+            material-color={getMaterialColor('HealOverlay')}
             position={[0.9, 0.76, 1]}
             rotation={[0, -1.57, 0]}
           />
@@ -144,7 +144,7 @@ export const Aj1Model: React.FC<Aj1ModelProps> = ({
           <mesh
             geometry={nodes.leftDownWithHoles.geometry}
             material={materials.QuarterOverlay}
-            material-color={getMaterialColor('Quarter Overlay')}
+            material-color={getMaterialColor('QuarterOverlay')}
             position={[-0.86, -0.16, 1.2]}
             rotation={[Math.PI / 2, 0, -Math.PI]}
           />
@@ -281,7 +281,7 @@ export const Aj1Model: React.FC<Aj1ModelProps> = ({
           <mesh
             geometry={nodes.rightBackMid001.geometry}
             material={materials.HealOverlay}
-            material-color={getMaterialColor('Heal Overlay')}
+            material-color={getMaterialColor('HealOverlay')}
             position={[0.87, 0.71, -1]}
             rotation={[-Math.PI, Math.PI / 2, 0]}
             scale={-1}
@@ -313,7 +313,7 @@ export const Aj1Model: React.FC<Aj1ModelProps> = ({
           <mesh
             geometry={nodes.rightDownWithHoles.geometry}
             material={materials.QuarterOverlay}
-            material-color={getMaterialColor('Quarter Overlay')}
+            material-color={getMaterialColor('QuarterOverlay')}
             position={[-0.88, -0.22, -1.21]}
             rotation={[-Math.PI / 2, 0, 0]}
             scale={-1}
