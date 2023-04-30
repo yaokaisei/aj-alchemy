@@ -1,8 +1,8 @@
 import type React from 'react';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { SelectToZoom } from '@src/components/R3fCanvasItems/SelectToZoom';
 import { Aj1Model, Stage } from '@src/components';
+import { SelectToZoom } from './SelectToZoom';
 
 /**
  * 編集モデルの描画機能

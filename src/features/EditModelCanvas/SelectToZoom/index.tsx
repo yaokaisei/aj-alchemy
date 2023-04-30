@@ -13,13 +13,11 @@ interface SelectToZoomProps {
 }
 
 export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
+  const api = useBounds();
   const { currentMaterialName, setCurrentMaterialName } =
     useCurrentMaterialName();
   const { setShowMaterialColorPicker } = useShowMaterialColorPickerState();
 
-  const api = useBounds();
-
-  // TODO: GlobalStateの参照をしないようにする
   useEffect(() => {
     if (currentMaterialName === '') {
       api.refresh().fit();
@@ -33,8 +31,6 @@ export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
       .name;
 
     if (currentMaterialName === selectMaterialName) return;
-    // TODO: propsでモデル箇所をクリックした時のイベントを実行できるようにする
-    // TODO: GlobalStateの更新はfeatureでおこなえるようにする
     setCurrentMaterialName(selectMaterialName);
     setShowMaterialColorPicker(true);
 
@@ -45,8 +41,6 @@ export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
 
   const pointerMissedHandler = (e: MouseEvent): void => {
     e.button === 0 && api.refresh().fit();
-    // TODO: propsでモデル以外の箇所をクリックした時のイベントを実行できるようにする
-    // TODO: GlobalStateの更新はfeatureでおこなえるようにする
     setCurrentMaterialName('');
     setShowMaterialColorPicker(false);
   };
