@@ -1,9 +1,11 @@
 import type React from 'react';
-import { PerspectiveCamera, useProgress } from '@react-three/drei';
+import { PerspectiveCamera, useProgress, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { Aj1Model, Layout, Stage } from '@src/components';
+import { Aj1Model, Layout } from '@src/components';
 import {
   Button,
+  CanvasInner,
+  CanvasOuter,
   CanvasWrapper,
   ContentsHeading,
   ContentsWrapper,
@@ -21,12 +23,21 @@ export const ShareGotem: React.FC = () => {
           <HeadingImage isActive={active}>
             <img src="/aj-alchemy/svg/decoration_text-gotem.svg" alt="GOT'EM" />
           </HeadingImage>
-          <Canvas flat>
-            <Stage>
-              <PerspectiveCamera makeDefault position={[-2, 0, 3]} />
-              <Aj1Model />
-            </Stage>
-          </Canvas>
+
+          <CanvasOuter>
+            <CanvasInner>
+              <Canvas flat>
+                <Stage adjustCamera={false} center={{ top: false }}>
+                  <PerspectiveCamera
+                    makeDefault
+                    position={[-0.3, 0, 8]}
+                    rotation={[0, 0, 0]}
+                  />
+                  <Aj1Model rotation={[0, 0.6, 0]} />
+                </Stage>
+              </Canvas>
+            </CanvasInner>
+          </CanvasOuter>
         </CanvasWrapper>
 
         <ContentsWrapper>

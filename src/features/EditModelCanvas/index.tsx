@@ -1,7 +1,7 @@
 import type React from 'react';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { Aj1Model, Stage } from '@src/components';
+import { Aj1Model } from '@src/components';
 import { SelectToZoom } from '@src/features/EditModelCanvas/SelectToZoom';
 
 /**
@@ -11,19 +11,20 @@ export const EditModelCanvas: React.FC = () => {
   return (
     <Canvas flat>
       <Stage>
-        <PerspectiveCamera makeDefault position={[-10, Math.PI / 2, 20]} />
         <OrbitControls
-          rotateSpeed={0.3}
           makeDefault
+          rotateSpeed={0.3}
           enablePan={false}
-          enableZoom
-          maxPolarAngle={Math.PI / 1}
+          maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
-          maxDistance={12}
-          minDistance={5}
+          enableZoom={false}
+          // FIXME: enableZoomによるズームの制限をすると、SelectToZoomの処理の後ちらつきが生じる
+          // maxDistance={10}
+          // minDistance={5}
         />
+
         <SelectToZoom>
-          <Aj1Model rotation={[0, 0, 0.2]} />
+          <Aj1Model rotation={[0, 0.3, 0.2]} />
         </SelectToZoom>
       </Stage>
     </Canvas>

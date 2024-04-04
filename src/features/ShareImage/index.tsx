@@ -1,8 +1,8 @@
 import type React from 'react';
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, Stage } from '@react-three/drei';
 import { Canvas, useThree } from '@react-three/fiber';
 import { useEffect } from 'react';
-import { Aj1Model, Stage } from '@src/components';
+import { Aj1Model } from '@src/components';
 import { useMaterial } from '@src/stores/materialState';
 import { useShareImageUrl } from '@src/stores/shareImageUrlState';
 import { ImageLayerFrame } from './ImageLayerFrame';

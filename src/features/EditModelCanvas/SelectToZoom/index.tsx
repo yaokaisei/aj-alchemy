@@ -13,16 +13,16 @@ interface SelectToZoomProps {
 }
 
 export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
-  const api = useBounds();
+  const bounds = useBounds();
   const { currentMaterialName, setCurrentMaterialName } =
     useCurrentMaterialName();
   const { setShowMaterialColorPicker } = useShowMaterialColorPickerState();
 
   useEffect(() => {
     if (currentMaterialName === '') {
-      api.refresh().fit();
+      bounds.refresh().fit();
     }
-  }, [currentMaterialName, api]);
+  }, [currentMaterialName, bounds]);
 
   const clickHandler = (e: ThreeEvent<MouseEvent>): void => {
     e.stopPropagation();
@@ -34,13 +34,13 @@ export const SelectToZoom: React.FC<SelectToZoomProps> = ({ children }) => {
     setCurrentMaterialName(selectMaterialName);
     setShowMaterialColorPicker(true);
 
-    if (e.delta <= 10) {
-      api.refresh(e.object).fit();
+    if (e.delta <= 2) {
+      bounds.refresh(e.object).fit();
     }
   };
 
   const pointerMissedHandler = (e: MouseEvent): void => {
-    e.button === 0 && api.refresh().fit();
+    e.button === 0 && bounds.refresh().fit();
     setCurrentMaterialName('');
     setShowMaterialColorPicker(false);
   };

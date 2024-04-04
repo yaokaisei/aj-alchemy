@@ -65,6 +65,18 @@ export const ContentsHeading = styled.h2`
   margin: 0;
 `;
 
+export const CanvasOuter = styled.div`
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+`;
+
+export const CanvasInner = styled.div`
+  width: 100%;
+  height: 90%;
+`;
+
 export const Button = styled.button`
   border: 0;
   background-color: #fff;
