@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import type { ContactShadowsProps, CenterProps } from '@react-three/drei';
 import type React from 'react';
 import { Center, Bounds, ContactShadows } from '@react-three/drei';
@@ -38,23 +37,28 @@ export const Stage: React.FC<JSX.IntrinsicElements['group'] & StageProps> = ({
     depth: 0,
   });
 
+  // 状態が更新されたかどうかを管理するフラグを追加
+  const [hasCentered, setHasCentered] = useState(false);
+
   return (
     <>
       <directionalLight intensity={intensity} />
       <ambientLight intensity={intensity / 2} />
 
       <Bounds fit margin={1} observe {...props}>
-        <Center
+        {/* <Center
           {...center}
-          position={[0, shadowOffset / 2, 0]}
-          onCentered={(props) => {
-            const { width, height, depth, boundingSphere } = props;
-            set({ radius: boundingSphere.radius, width, height, depth });
-            if (center?.onCentered != null) center.onCentered(props);
-          }}
+          // position={[0, shadowOffset / 2, 0]}
+          // onCentered={(props) => {
+          //   if (!hasCentered) { // 最初の一回のみ実行
+          //     const { width, height, depth, boundingSphere } = props;
+          //     set({ radius: boundingSphere.radius, width, height, depth });
+          //     setHasCentered(true); // 状態が更新されたことをマーク
+          //   }
+          // }}
         >
-          {children}
-        </Center>
+        </Center> */}
+        {children}
       </Bounds>
 
       <group position={[0, -height / 2 - shadowOffset / 2, 0]}>
