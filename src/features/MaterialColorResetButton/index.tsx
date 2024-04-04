@@ -9,15 +9,9 @@ export const MaterialColorResetButton: React.FC = () => {
    * デフォルトプリセットにステートを更新してから
    * materialStateのローカルストレージを削除する
    */
-  const resetMaterialState = (): void => {
-    Promise.resolve()
-      .then(() => {
-        setMaterials(PRESET_DEFAULT);
-        localStorage.removeItem('material-state');
-      })
-      .catch((error) => {
-        console.error('resetMaterialState error:', error);
-      });
+  const resetMaterialState = async () => {
+    await setMaterials(PRESET_DEFAULT);
+    localStorage.removeItem('material-state');
   };
 
   return <button onClick={resetMaterialState}>デフォルトに戻す</button>;
