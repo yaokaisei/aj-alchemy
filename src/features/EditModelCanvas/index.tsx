@@ -14,9 +14,9 @@ export const EditModelCanvas: React.FC = () => {
         <OrbitControls
           makeDefault
           rotateSpeed={0.5}
-          enablePan={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
+          enablePan={false}
           enableZoom={true}
           maxDistance={10}
           minDistance={1}
