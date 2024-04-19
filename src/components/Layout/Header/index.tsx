@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
       </HeaderLogo>
 
       <HeaderContents>
-        <StyledLink to="./share">GOT’EM SHARE</StyledLink>
+        <StyledLink to="/aj-alchemy/share">GOT’EM SHARE</StyledLink>
       </HeaderContents>
     </HeaderWrapper>
   );
