@@ -13,14 +13,13 @@ export const EditModelCanvas: React.FC = () => {
       <Stage>
         <OrbitControls
           makeDefault
-          rotateSpeed={0.3}
-          enablePan={false}
+          rotateSpeed={0.5}
+          enablePan={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
-          enableZoom={false}
-          // FIXME: enableZoomによるズームの制限をすると、SelectToZoomの処理の後ちらつきが生じる
-          // maxDistance={10}
-          // minDistance={5}
+          enableZoom={true}
+          maxDistance={10}
+          minDistance={1}
         />
 
         <SelectToZoom>

@@ -8,7 +8,8 @@ const FIXED_MIN_HEIGHT = '60px';
 export const Wrapper = styled.div`
   background: linear-gradient(
     180deg,
-    #232323,
+    #222222,
+    #2c2c2c,
     #121212
   ); /* TODO: テーマで管理する */
   position: relative;
